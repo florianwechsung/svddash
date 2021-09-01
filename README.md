@@ -14,16 +14,16 @@ Functions of this form are a useful measure for mesh quality in shape optimisati
 
 ## Usage
 
-    import svddash as cpp
-    import numpy as np
+    import svddash
+    import numpy
 
-    np.random.seed(1)
+    numpy.random.seed(1)
     d = 5
-    A = np.random.standard_normal(size=(d, d))
+    A = numpy.random.standard_normal(size=(d, d))
 
     threshold = 1.
     alpha = 3.
-    f, df, d2f = cpp.compute(A, threshold, alpha)
+    f, df, d2f = svddash.compute(A, threshold, alpha)
 
 After running this, `f` is a scalar, `df` is a `dxd` matrix, and `d2f` is a `dxdxdxd` tensor.
 
